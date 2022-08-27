@@ -1,28 +1,29 @@
 #include<stdio.h>
 
-void Add(int n)
+double Add(int n)
 {
-	int arr[n];
-	int sum = 0;
-	printf("Enter values of Array");
-	for(i=0; i < sizeof(arr[n]); i++)
+	double arr[n];
+	double sum = 0 ;
+	printf("Enter values of Array \n");
+	for(int i=0; i < n; i++)
 	{
-		scanf("%d", &arr[i]);
+		scanf("%lf", &arr[i]);
 	}
-
-	for(j= 0; j < sizeof(arr[n]); j++)
+	
+	for(int i= 0; i < n; i++)
 	{
-		sum = (sum+arr[j]);
-		printf("Sum of all the values of the array %d", sum);
+		sum =sum + arr[i];
+		
 	}
-	return ;
+	printf("Sum of all the values of the array are %lf  \n", sum);
+	return 0;
 }
 
-void main()
+int main()
 {
-	printf("Enter size of arrray ");
-	int n;
+	printf("Enter size of arrray \n");
+	int n = 0;
 	scanf("%d", &n);
 	Add(n);
-	return ;
+	return 0;
 }
