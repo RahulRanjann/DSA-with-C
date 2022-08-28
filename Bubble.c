@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(int argc, char const *argv[])
+int main()
 {  
     int size , flag = 0;
     printf("Enter a number to define size of array\n");
@@ -16,11 +16,11 @@ int main(int argc, char const *argv[])
     {
         for (int j = 0; j < size-1; j++)
         {
-            if(arr[j] > arr[j+i])
+            if(arr[j] > arr[j+1])
             {
                 flag = arr[j];
                 arr[j] = arr[j+1];
-                arr[j+i] = flag;
+                arr[j+1] = flag;
 
             }
         }
