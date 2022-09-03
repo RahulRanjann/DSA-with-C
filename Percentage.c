@@ -6,7 +6,7 @@ int main(int argc, char const *argv[])
 {
     percentage();
     return 0;
-}
+}  
 
 void percentage()
 {
