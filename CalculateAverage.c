@@ -1,9 +1,8 @@
 #include <stdio.h>
 int main(int argc, char const *argv[])
 {
-    int n ,i;
-    int average;
-    int sum = 0;
+    int n ,i, average, sum = 0;
+    
     printf("Enter the size of array \n");
     scanf("%d", &n);
     int arr[n];
@@ -12,7 +11,7 @@ int main(int argc, char const *argv[])
     for ( i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);     
-         sum = arr[i] + sum;                                 
+         sum += arr[i];                                 
     }
   
     
