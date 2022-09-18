@@ -2,8 +2,11 @@
 int fib(int n);
 int main(int argc, char const *argv[])
 { 
-    printf("Enter a no. to print Fibonacci series")
-    fib(5);
+    printf("Enter a no. to print Fibonacci series \n");
+    int n ;
+    scanf("%d", &n);
+    printf("\n");
+    fib(n);
     return 0;
 }
  
