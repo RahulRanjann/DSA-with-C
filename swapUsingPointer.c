@@ -4,11 +4,11 @@ int main(int argc, char const *argv[])
 {
     int a , b;
     printf("Enter a number");
-    scanf("%d",&a);
+    scanf(" %d",&a);
     printf("Enter a anoter number ");
-    scanf("%d",&b);
+    scanf(" %d",&b);
     swap(&a,&b);
-    printf("after swaping the value of\n  a =  %d \n b = %d",a, b);
+    printf("after swaping the value of\n a =  %d \n b = %d",a, b);
 
     return 0;
 }
