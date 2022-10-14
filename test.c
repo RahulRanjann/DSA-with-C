@@ -32,32 +32,40 @@
 
 //   printf("Using point the value of a is %d \n", q);
 
-//       printf("Sum of the a and b %d", (a + b));
+//       printf( pro of the a and b %d", (a + b));
 
 //   return 0;
 // }
 
 
-int sum(int );
-void main(int argc, char const *argv[])
-{
- printf("%d\n",sum(6));
+// int pro(int );
+// void main(int argc, char const *argv[])
+// {
+//  printf("%d\n",pro(5));
   
-}
+// }
 
-int sum(int n)
-{
- 
-  if (n==0)
-  {
+// int pro(int n)
+// {
+//     int m=1 ;
+   
+
+//    if (n==1)
+//    {
+//     return m = m*pro(n-1);
     
+//    }
+
+   
+
+ 
+// }
+
+int main(int argc, char const *argv[])
+{
+    while(1)
+    {
+        printf("1");
+    }
     return 0;
-  }
-   int a = n;
-  printf("%d ",a);
-  sum(n-1);
-
- 
- 
 }
-

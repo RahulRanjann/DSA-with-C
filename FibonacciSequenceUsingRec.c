@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
     int n ;
     scanf("%d",&n);
     printf("0\t1\t");
-    fib(n);
+    fib(n-2);
     return 0;
 }
 
@@ -23,5 +23,5 @@ void fib(int n)
         num2 = num3;
         fib(n-1);
      }
-     
+
 }
