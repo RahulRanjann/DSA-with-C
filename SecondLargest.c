@@ -14,26 +14,10 @@ int Larg(int arr[], int size)
     
 }
 
-int secLarg(int arr[], int size int largest)
-{
-    
-    for (int  i = 0; i < size; i++)
-    {
-        if (largest == arr[i] )
-        {
-           
-        }
-        else
-        {
-           
-            
-        }
+
 
         
-    }
-    
-}
-
+  
 
 
 int main() {
