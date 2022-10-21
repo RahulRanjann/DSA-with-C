@@ -61,11 +61,24 @@
  
 // }
 
+// int main(int argc, char const *argv[])
+// {
+//     while(1)
+//     {
+//         printf("1");
+//     }
+//     return 0;
+// }
+
 int main(int argc, char const *argv[])
 {
-    while(1)
-    {
-        printf("1");
-    }
+    int a = 10; 
+
+    int *p = &a;
+    int ** ptr = &p;
+    printf("%d\n", **ptr+1);
+    printf("%d\n",&ptr);
+    printf("%d\n",&p);
+    printf("%d\n",&a);
     return 0;
 }
