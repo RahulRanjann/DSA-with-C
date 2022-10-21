@@ -1,18 +1,36 @@
 #include <stdio.h>
-int secLarg(int arr[], int size)
+int Larg(int arr[], int size)
 {
-    int a, b;
-    a = b = arr[0];
-    for (int  i = 0; i < size; i++)
+    int larg = 0
+    for (int  i = 1; i < size; i++)
     {
-        if (a <= arr[i])
+        if (arr[0] < arr[i])
         {
-           b = a;
-           a = arr[i];
+           arr[0] = arr[i];
         }
         
     }
-    return b;
+    return  arr[0];
+    
+}
+
+int secLarg(int arr[], int size int largest)
+{
+    
+    for (int  i = 0; i < size; i++)
+    {
+        if (largest == arr[i] )
+        {
+           
+        }
+        else
+        {
+           
+            
+        }
+
+        
+    }
     
 }
 
@@ -28,7 +46,8 @@ int main() {
     {
         scanf("%d",&arr[i]);
     }
-   int num = secLarg(arr, size);
+   int larget = Larg(arr, size);
+   int secondLarget = secLarg(arr, size , larget);
    printf("\nThe second largest element of array is %d", num);
    
    return 0;
