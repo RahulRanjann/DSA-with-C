@@ -5,8 +5,9 @@ typedef struct node
 {
     int data;
     struct node *next;
-} node;
+}node;
 
+// display function 
 void print(node *n)
 {
     printf("The element are:- ");
@@ -17,6 +18,8 @@ void print(node *n)
     }
     printf("\n");
 }
+
+// insertAt first index 
 node *insertAt0(node *head, int d)
 {
     printf("After insertAt0\n ");
@@ -26,6 +29,7 @@ node *insertAt0(node *head, int d)
     return p;
 }
 
+// insert in Between 
 node *insertInBetween(node *head, int d, int index)
 {
     if (index == 0)
@@ -51,6 +55,7 @@ node *insertInBetween(node *head, int d, int index)
     }
 }
 
+// insert at the end 
 node* insertAtEnd(node* head, int data)
 {
     printf("After insertion in end  \n");
@@ -67,6 +72,62 @@ node* insertAtEnd(node* head, int data)
     return head;
 }
 
+// insert after a node 
+node*  insertAfterNode(node* head, node* prevNode, int  dat)
+{
+    printf("insert after a node");
+    node* ptr = (node*)malloc(sizeof(node));
+    ptr-> data = dat;
+    
+    ptr->next= prevNode->next ;
+    prevNode->next = ptr;
+    return head;
+}
+
+// Deletation of linked list
+node* deleteFromFirst(node* head)
+{
+    printf("First Element deleted for the linked List");
+    node* p = head;
+    head = head->next;
+    free(p);
+    return head;
+}
+
+// Deleting after a index
+node* deleteAfterindex(node* head, int pos)
+{
+    printf("Succesfully Deleted the node at %d\n",pos);
+    node* p = head;
+    node* q = head->next;
+    for (int i = 0; i < pos-1; i++)
+    {
+        p = p->next;
+        q = q->next;
+    }
+    
+    p->next = q->next;
+    free(q);
+    return head; 
+}
+
+// Delete the last node
+node* deleteFromLastNode(node* head)
+{
+    printf("Sucessfuly delete the last Node");
+    node* p = head;
+    node* q = head->next;
+    while (q->next != NULL)
+    {
+        p = p->next;
+        q = q->next;
+    }
+    p->next = NULL;
+    free(q);
+    return head;
+    
+    
+}
 int main(int argc, char const *argv[])
 {
     node *head;
@@ -98,6 +159,14 @@ int main(int argc, char const *argv[])
     print(head);
     head = insertAtEnd(head, 200);
     print(head);
-
-    return 0;
+    head = insertAfterNode(head,third,9999);
+    print(head);
+    head = deleteFromFirst(head);
+    print(head);
+    head = deleteAfterindex(head , 4);
+    print(head);
+    head = deleteFromLastNode(head);
+    print(head);
+    printf("\n\nYou are doing great!");
+    return 0; 
 }
